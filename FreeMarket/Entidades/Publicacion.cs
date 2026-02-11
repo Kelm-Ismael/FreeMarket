@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class Publicacion
+    public class Publicacion : Entidad, IOperable
     {
+        private decimal Precio;
+        private int Stock;
+        private bool Habilitada = true;
+
+        public decimal precio
+        {
+            get => Precio;
+            set 
+            {
+                if (value > 0)
+                    throw new Exception("El precion debe ser mayor a cero.");
+                Precio = value;
+            }
+        }
+
+
     }
 }

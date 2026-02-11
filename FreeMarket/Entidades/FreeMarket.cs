@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    internal class FreeMarket
+    public class FreeMarket 
     {
+        private List<Publicacion> publicaciones;
+        private List<Comprador> comprador;
+
+
     }
 }
