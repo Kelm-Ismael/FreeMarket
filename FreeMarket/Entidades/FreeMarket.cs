@@ -6,10 +6,32 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    public class FreeMarket 
+    public class FreeMarket
     {
-        private List<Publicacion> publicaciones;
-        private List<Comprador> comprador;
+        private static List<Publicacion> publicaciones = new List<Publicacion>();
+        private static List<Comprador> compradores = new List<Comprador>();
+
+        public static void AddPublicacion(Publicacion publicacion)
+        {
+            publicaciones.Add(publicacion);
+
+        }
+
+        public static void AddComprador(Comprador comprador)
+        {
+            compradores.Add(comprador);
+        }
+
+        public static List<Publicacion> GetPublicaciones()
+        {
+            return publicaciones;
+        }
+
+        public static List<Comprador> GetCompradores()
+        {
+            return compradores;
+        }
+
 
 
     }
